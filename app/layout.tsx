@@ -1,13 +1,13 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, JetBrains_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "sonner"
 import "./globals.css"
 import { LanguageProvider } from "@/contexts/language-context"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] })
+const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Unity Hotel and Guesthouse Business Association of Nepal",
@@ -42,7 +42,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico" />
         <meta name="theme-color" content="#1a472a" />
       </head>
-      <body className={`font-sans antialiased`} suppressHydrationWarning>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <LanguageProvider>{children}</LanguageProvider>
         <Toaster position="top-right" richColors closeButton />
         <Analytics />
