@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -11,6 +12,11 @@ const nextConfig = {
         hostname: 'hotelassociationktm.org.np',
       },
     ],
+  },
+  trailingSlash: true,
+  // Experimental flag to disable React Server Components
+  experimental: {
+    appDocumentPreloading: false,
   },
 }
 
