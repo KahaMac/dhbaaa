@@ -7,6 +7,15 @@ import { Briefcase, MapPin, Clock, DollarSign, Building2, Users, Calendar, Arrow
 import Link from "next/link"
 import { useState, use } from "react"
 
+// Generate static params for static export
+export async function generateStaticParams() {
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ]
+}
+
 export default function JobDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
   const [isBookmarked, setIsBookmarked] = useState(false)

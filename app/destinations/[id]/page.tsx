@@ -4,6 +4,15 @@ import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { MapPin, Hotel, ArrowRight } from "lucide-react"
 
+// Generate static params for static export
+export async function generateStaticParams() {
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ]
+}
+
 // Mock destination detail
 const mockDestination = {
   id: "1",

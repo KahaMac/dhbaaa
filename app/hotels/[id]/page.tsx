@@ -3,6 +3,15 @@ import { Footer } from "@/components/footer"
 import { Breadcrumb } from "@/components/breadcrumb"
 import { Star, MapPin, Phone, Globe, Mail } from "lucide-react"
 
+// Generate static params for static export
+export async function generateStaticParams() {
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ]
+}
+
 // Mock hotel details
 const mockHotel = {
   id: "1",

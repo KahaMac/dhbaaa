@@ -7,6 +7,16 @@ import Link from "next/link"
 import { ArrowLeft, Calendar, User, Clock, Share2, Bookmark, Facebook, Twitter, Linkedin } from "lucide-react"
 import { use, useState } from "react"
 
+// Generate static params for static export
+export async function generateStaticParams() {
+  // Return the blog post IDs that should be statically generated
+  return [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ]
+}
+
 export default function BlogPostPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
   const [isBookmarked, setIsBookmarked] = useState(false)
